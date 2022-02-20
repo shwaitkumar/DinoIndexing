@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dino View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DinoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DinoViewController" customModule="Task1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-aI-3J6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="VPx-Dg-vWj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="364"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GVx-su-I6M">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ot8-Zm-Vrq">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="DinoCollectionViewCell" id="Jvo-w1-pTq" customClass="DinoCollectionViewCell" customModule="Task1" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XDW-V7-8fZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-XG-8cI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="dbz-XG-8cI" secondAttribute="bottom" id="7ah-yh-eNS"/>
+                                                            <constraint firstItem="dbz-XG-8cI" firstAttribute="leading" secondItem="XDW-V7-8fZ" secondAttribute="leading" id="ScF-hk-dnl"/>
+                                                            <constraint firstItem="dbz-XG-8cI" firstAttribute="top" secondItem="XDW-V7-8fZ" secondAttribute="top" id="rzb-jt-t9h"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dbz-XG-8cI" secondAttribute="trailing" id="z0B-Ea-OBb"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="ivDino" destination="dbz-XG-8cI" id="fWj-Zq-I2E"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grass" translatesAutoresizingMaskIntoConstraints="NO" id="hKg-Zy-ePu">
+                                            <rect key="frame" x="0.0" y="238" width="414" height="86"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="iDA-eb-jan">
+                                            <rect key="frame" x="0.0" y="324" width="414" height="40"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="hKg-Zy-ePu" firstAttribute="height" secondItem="GVx-su-I6M" secondAttribute="height" multiplier="0.25" id="9C4-zt-EVh"/>
+                                        <constraint firstAttribute="bottom" secondItem="GVx-su-I6M" secondAttribute="bottom" constant="20" id="FuQ-h7-Oqj"/>
+                                        <constraint firstAttribute="bottom" secondItem="hKg-Zy-ePu" secondAttribute="bottom" constant="40" id="G0y-m7-Bf7"/>
+                                        <constraint firstAttribute="bottom" secondItem="iDA-eb-jan" secondAttribute="bottom" id="Nlx-Bn-e9T"/>
+                                        <constraint firstAttribute="trailing" secondItem="iDA-eb-jan" secondAttribute="trailing" id="UAp-rU-LeK"/>
+                                        <constraint firstItem="iDA-eb-jan" firstAttribute="top" secondItem="hKg-Zy-ePu" secondAttribute="bottom" id="Vfe-WK-ZsC"/>
+                                        <constraint firstItem="hKg-Zy-ePu" firstAttribute="leading" secondItem="VPx-Dg-vWj" secondAttribute="leading" id="d5h-KK-9QI"/>
+                                        <constraint firstAttribute="trailing" secondItem="hKg-Zy-ePu" secondAttribute="trailing" id="elm-D4-Zkj"/>
+                                        <constraint firstItem="GVx-su-I6M" firstAttribute="top" secondItem="VPx-Dg-vWj" secondAttribute="top" id="m6u-Vq-NYa"/>
+                                        <constraint firstItem="iDA-eb-jan" firstAttribute="leading" secondItem="VPx-Dg-vWj" secondAttribute="leading" id="n2S-t9-c2y"/>
+                                        <constraint firstItem="GVx-su-I6M" firstAttribute="leading" secondItem="VPx-Dg-vWj" secondAttribute="leading" id="udk-rp-Yuk"/>
+                                        <constraint firstAttribute="trailing" secondItem="GVx-su-I6M" secondAttribute="trailing" id="xY3-83-9x4"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DinoTableViewCell" id="M1r-Uf-zWE" customClass="DinoTableViewCell" customModule="Task1" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="413.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M1r-Uf-zWE" id="UhM-zE-Dev">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RfU-aI-3J6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Eb-pG-A4x"/>
+                            <constraint firstItem="RfU-aI-3J6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ADd-lF-flw"/>
+                            <constraint firstAttribute="bottom" secondItem="RfU-aI-3J6" secondAttribute="bottom" id="Mig-YS-G41"/>
+                            <constraint firstItem="RfU-aI-3J6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QRU-rh-zSQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cvDino" destination="GVx-su-I6M" id="uTZ-Zh-P88"/>
+                        <outlet property="tblDino" destination="RfU-aI-3J6" id="pnC-wg-eys"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="grass" width="1646" height="1032"/>
+        <image name="ground" width="1501" height="518"/>
+        <namedColor name="AccentColor">
+            <color red="0.094220928849999996" green="0.2012248039" blue="0.13949552179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.87526720759999999" green="0.86086982489999997" blue="0.72732257840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
